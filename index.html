@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="style.css">
+       <link rel="icon" href="bjc_logo.png" >
+        <title>Big John Nolt's BBQ and Catering</title>
+    </head>
+    <body>
+        <header id="header">
+            
+              <a href="./"><img src="bjc_logo.png" style="display: flex; justify-content: center;" alt="Big John's Catering" id="logo"></img></a> 
+            <div onclick="showNav()" id="openNav">Menu</div>
+              <div id="links">
+                  
+                  <a href="hot-buffet" class="link  underline-left-to-right">Hot Buffet</a>
+                  <a href="hor-doeuvres" class="link  underline-left-to-right">Hor D'oeuvres</a>
+                  
+                  <a href="events" class="link underline-left-to-right">Event Links</a>
+                
+                  <a href="contact" class="link2 underline-left-to-right">Contact Us</a>
+                  
+                  <a href="meet-us" class="link2 underline-left-to-right">Meet Us</a>
+                  <a href="custom-menu" class="link2 underline-left-to-right">Custom Menu</a>
+        </header>
+        <main>
+            <div class="hero-section">
+                <div class="hero-items">
+                <h1 style="text-align: center;">Why Choose Big John Nolt's BBQ & Catering?</h1> 
+                <ul>
+                    <li>Hand Made with the Highest Quality and Precision to get the Best Food</li>
+                    <li>Family Owned and Operated</li>
+                    <li>Over 20 Years of Experience</li>
+                    <li>Licensed and Food Certified</li>
+                    <li>Serves all Over PA</li>
+                    <li>Affordable Prices</li>
+                </ul>
+                    <a href="#contactForm"  id="contactButtonA"><button id="contactButton">Contact Us Now!</button></a>
+                    </div>
+            </div>
+            <div id="mainItems">
+            <p id="about"><strong>John Nolt's BBQ & Catering is a full service off-site caterer that keeps the "home-cooked from scratch" flavor in our foods. With over ten years of catering experience in Central Pennsylvania and beyond, you can relax knowing that we set up, serve and clean up. From picnics, private parties, corporate events and weddings, you can trust our experienced and professional staff to provide a delicious mouth-watering feast for you and your guests. <br> <br> Big John Nolt's BBQ & Catering offers a variety of menu options and will be happy to create custom menus for your event, budget and lifestyle.</strong></p>
+            <!--<img src="homepic.jpg" id="foodpic1"> -->   
+        <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+      <p class="carousel-slide"><em>Thank's for your great sevice it was delicious and everyone raved as always.<br><br>Martin Appliance</em></p>
+      <p class="carousel-slide"><em>Our employees are still talking about your meal and wondering when you are comming back!<br><br>Fairmont Homes Retirement Community</em></p>
+      <p class="carousel-slide"><em>Thank you so much for the delicious meal and wonderful service.<br><br>Lancaster Evengelical Free Church</em></p>
+      <p class="carousel-slide"><em>The meal was great and everyone enjoyed it.<br><br>David and Dawn Smith, Ephrata Agway</em></p>
+      <p class="carousel-slide"><em>Everyone was raving about the food at our wedding, it was truly perfect.<br><br>Julie Jesneck, bride</em></p>
+      <p class="carousel-slide"><em>Thank you again for a job well done on our Texas BBQ meal.<br><br>Lititz Area Mennonite School</em></p>
+      <p class="carousel-slide"><em>Thank you for preparing and serving the food   for our fundraiser. It was delicious.<br><br>Mt. Hope Youth Group</em></p>
+      <p class="carousel-slide"><em>Everything was excellent, people loved the food! You did a superb job serving and seeing to our needs.<br><br>Jeff and Lisa Lee</em></p>
+    </div>
+
+  </div>
+   
+                
+      <form method="put" id="contactForm" action="thanks.html">
+          <h1 id="contactFormH1">Contact Us</h1>
+            <fieldset>
+          <label>Client Name:<input type="text" name="client_name" required></label>
+          <label>Phone Number:<input type="tel" name="phone" required></label>
+          <label>Email Address:<input type="email" name="email"></label>
+          <label>Event Date:<input type="date" name="event_date" required></label>
+                <br>
+          <label>Event Time:<input type="time" name="event_time" required></label>
+          <label>Number of Guests:<input type="number" name="guest_count" min="1" required></label>
+          <label>Event Location:<input name="event_location" required></label>
+          <label>Additional Notes:<input name="additional_notes" id="notes"></label>
+                <button type="submit">Submit</button>
+            </fieldset>
+          
+
+          </form>
+        </div>
+</div>
+            <!--<img src="cake.jpg" id="foodpic2">-->
+        </main>
+
+        <footer id="footer">
+            
+            <p class="stuff">Established in 2002  <a href="https://www.google.com/search?q=Chamber+of+Commerce+R1116275">Chamber of Commerce R1116275</a>  Fully Licensed and Food Certified</p>
+            <p class="stuff">&copy; 2025 Big John Nolt's BBQ and Catering</p>
+                <p id="contact"><a href="https://www.google.com/maps/place//@40.242637,-76.2156168,17z">415 E Mount Airy Road Stevens, PA 17578</a>   Phone <a href="tel:7173363730">(717) 336-3730 </a>  Fax <a href="tel:7173365189">(717) 336-5189</a></p>
+
+        </footer>
+
+    </body>
+    <script>
+
+
+
+
+
+
+
+
+
+        
+         const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const slideCount = slides.length;
+    let index = 0;
+
+    // Clone first slide for seamless looping
+    const firstClone = slides[0].cloneNode(true);
+    track.appendChild(firstClone);
+
+    function nextSlide() {
+      index++;
+      track.style.transition = 'transform 0.7s cubic-bezier(0.4,0,0.2,1)';
+      track.style.transform = `translateX(-${index * 100}%)`;
+      if (index === slideCount) {
+        setTimeout(() => {
+          track.style.transition = 'none';
+          track.style.transform = 'translateX(0)';
+          index = 0;
+        }, 700);
+      }
+    }
+     
+    setInterval(nextSlide, 4000);
+        function showNav(){
+            document.getElementById('header').style.height = '300px';
+            document.getElementById('openNav').textContent = 'Close';
+            document.getElementById('openNav').onclick = closeNav;
+            document.getElementById('header').style.transition = '0.5s';
+
+
+        }
+        function closeNav(){
+        document.getElementById('header').style.height = '120px';
+        document.getElementById('openNav').textContent = 'Menu';
+        document.getElementById('openNav').onclick = showNav;
+        document.getElementById('header').style.transition = '0.5s';
+
+        }
+  
+/*
+
+        let lastScroll = window.scrollY;
+          const directionDiv = document.getElementById('direction');
+
+          window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > lastScroll) {
+                document.getElementById('header').style.height = '50px';
+                document.getElementById('links').style.display = 'none';
+                document.getElementById('logo').style.height = '50px';
+                document.getElementById('logo').style.justifyContent = 'center';
+                document.getElementById('logo').style.marginLeft = '38%';
+     
+            } else if (currentScroll < lastScroll) {
+                document.getElementById('header').style.height = '90px';
+                document.getElementById('links').style.display = '';
+                document.getElementById('logo').style.height = '90px';
+                 document.getElementById('logo').style.position = 'fixed';
+                document.getElementById('links').style.marginLeft = '25%';
+                document.getElementById('logo').style.marginLeft = '0%';
+              
+            }
+
+            lastScroll = currentScroll;
+
+
+              const cursorDiv = document.getElementById('cursor');
+
+                document.addEventListener('mousemove', (event) => {
+                  const x = event.clientX;
+                  const y = event.clientY;
+                  if (y < 5){
+                      document.getElementById('header').style.height = '90px';
+                      document.getElementById('links').style.display = '';
+                      document.getElementById('logo').style.height = '90px';
+                       document.getElementById('logo').style.position = 'fixed';
+                      document.getElementById('links').style.marginLeft = '25%';
+                      document.getElementById('logo').style.marginLeft = '0%';
+                      
+                  }
+                    
+                });
+          });
+
+
+*/
+
+
+        
+</script>
+    <video id="myVideo" class="bg-video" autoplay loop muted playsinline>
+           <source src="fire.mp4" type="video/mp4" id="video" autoplay loop>
+       </video>
+
+</html>

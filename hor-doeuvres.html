@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="style.css">
+       <link rel="icon" href="bjc_logo.png">
+       <title>Hor D'oeuvres - Big John Nolt's BBQ and Catering</title>
+    </head>
+    <body>
+      <header id="header">
+            <a href="./"><img src="bjc_logo.png" alt="Big John's Catering" id="logo"></img></a> 
+          <div onclick="showNav()" id="openNav">Menu</div>
+            <div id="links">
+
+                <a href="hot-buffet" class="link  underline-left-to-right">Hot Buffet</a>
+                <a href="hor-doeuvres" class="link  underline-left-to-right">Hor D'oeuvres</a>
+
+                <a href="events" class="link underline-left-to-right">Event Links</a>
+
+                <a href="contact" class="link2 underline-left-to-right">Contact Us</a>
+
+                <a href="meet-us" class="link2 underline-left-to-right">Meet Us</a>
+                <a href="custom-menu" class="link2 underline-left-to-right">Custom Menu</a>
+      </header>
+        <main>
+         
+            <h1 style="text-align: center;">Hor D'oeuvres</h1>
+          <h3>Event Details</h3>
+ <form id="form1" method="put" action="thanks">
+<fieldset>
+  <fieldset>
+    <legend>Event Information</legend>
+
+    <label for="event-date">Event Date:</label>
+    <input type="date" id="event-date" class="check" name="event_date"><br><br>
+
+    <label for="event-location">Event Location:</label>
+    <input type="text" id="event-location" class="check" name="event_location"><br><br>
+
+    <label for="serving-time">Serving Time:</label>
+    <input type="time" id="serving-time" class="check" name="serving_time"><br><br>
+
+    <label for="num-adults">Number of Adults:</label>
+    <input type="number" id="num-adults" class="check" name="num_adults" min="0"><br><br>
+
+    <label for="num-children">Number of Children (4-11):</label>
+    <input type="number" id="num-children" class="check" name="num_children" min="0"><br><br>
+
+    <label for="num-under4">Number under 4 years of age:</label>
+    <input type="number" id="num-under4" class="check" name="num_under4" min="0"><br><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Customer Information</legend>
+
+    <label for="customer-name">Customer Name:</label>
+    <input type="text" id="customer-name" class="check" name="customer_name"><br><br>
+
+    <label for="customer-address">Address:</label>
+    <input type="text" id="customer-address" class="check" name="customer_address"><br><br>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city"><br><br>
+
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state"><br><br>
+
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" name="zip" maxlength="10"><br><br>
+
+    <label for="home-phone">Home Phone Number:</label>
+    <input type="tel" id="home-phone" name="home_phone"><br><br>
+
+    <label for="cell-phone">Cell Phone Number:</label>
+    <input type="tel" id="cell-phone" name="cell_phone"><br><br>
+  </fieldset>
+
+  <h3 style="text-align: center;">Priced per person unless otherwise noted</h3><br><br><br>
+
+  <fieldset>
+    <legend>Menu Selection - Entrees and Appetizers</legend>
+
+    <div class="checkbox-item">
+      <label><input type="checkbox" name="menu[]" value="BBQ Meatballs"> BBQ Meatballs - $3.00</label>
+      <div class="description">Meatballs topped with our special BBQ sauce.</div>
+    </div>
+
+    <div class="checkbox-item">
+      <label><input type="checkbox" name="menu[]" value="Shrimp Cocktail"> Shrimp Cocktail - $6.00</label>
+      <div class="description">Cooked, peeled and deveined shrimp served with cocktail sauce.</div>
+    </div>
+
+    <div class="checkbox-item">
+      <label><input type="checkbox" name="menu[]" value="Beef and Cheese Dip"> Beef and Cheese Dip - $3.00</label>
+      <div class="description">Beef with mild Mexican seasoned cheese dip served with tortilla chips.</div>
+    </div>
+
+    <div class="checkbox-item">
+      <label><input type="checkbox" name="menu[]" value="Salad Bar"> Salad Bar - $7.00</label>
+      <div class="description">Self-serve salad bar including fresh lettuce, a variety of salad fixings, dressings.</div>
+    </div>
+
+    <div class="checkbox-item">
+      <label><input type="checkbox" name="menu[]" value="Appetizer Salad"> Appetizer Salad - $3.00</label>
+      <div class="description">Includes single serve salads and dressings.</div>
+    </div>
+
+    <div class="checkbox-item">
+      <label><input type="checkbox" name="menu[]" value="Fresh Vegetable Platter"> Fresh Vegetable Platter - $3.00</label>
+      <div class="description">Includes celery, carrots, broccoli, peppers, cauliflower, cucumber and dip.</div>
+    </div>
+
+    <div class="checkbox-item">
+      <label><input type="checkbox" name="menu[]" value="Fresh Fruit Tray or Cups"> Fresh Fruit Tray or Cups - $3.00</label>
+      <div class="description">Includes assorted fruits and melons in season with dip.</div>
+    </div>
+
+    <div class="checkbox-item">
+      <label><input type="checkbox" name="menu[]" value="Cheese and Bologna Platter"> Cheese and Bologna Platter - $4.00</label>
+      <div class="description">Includes cubed Longhorn, Farmers, and Swiss Cheese, ring bologna and sweet bologna cubes.</div>
+    </div>
+
+    <div class="checkbox-item">
+      <label><input type="checkbox" name="menu[]" value="Cracker and Cheese Platter"> Cracker and Cheese Platter - $3.00</label>
+      <div class="description">Includes Assorted Cheeses or a Spreadable Cheese Ball and crackers.</div>
+    </div>
+
+  </fieldset>
+   <button type="submit">Submit</button>
+  </fieldset>
+</form>
+
+
+
+
+
+        
+        </main>
+
+      <footer id="footer">
+          <p class="stuff">Established in 2002  <a href="https://www.google.com/search?q=Chamber+of+Commerce+R1116275">Chamber of Commerce R1116275</a>  Fully Licensed and Food Certified</p>
+          <p class="stuff">&copy; 2025 Big John Nolt's BBQ and Catering</p>
+              <p id="contact"><a href="https://www.google.com/maps/place//@40.242637,-76.2156168,17z">415 E Mount Airy Road Stevens, PA 17578</a>   Phone <a href="tel:7173363730">(717) 336-3730 </a>  Fax <a href="tel:7173365189">(717) 336-5189</a></p>
+
+      </footer>
+    
+    </body>
+    <script>
+        function printForm() {
+            // Print only the form, not header/footer
+            window.print();
+        }
+        const formFields = [
+    "event-date", "event-location", "serving-time",
+    "num-adults", "num-children", "num-under4",
+    "customer-name", "customer-address", "city",
+    "state", "zip", "home-phone", "cell-phone"
+  ];
+
+  const checkboxSelector = 'input[type="checkbox"][name="menu[]"]';
+
+  function syncForms(fromFormId, toFormId) {
+    const fromForm = document.getElementById(fromFormId);
+    const toForm = document.getElementById(toFormId);
+
+    formFields.forEach(id => {
+      const fromInput = fromForm.querySelector(`#${id}`);
+      const toInput = toForm.querySelector(`#${id}`);
+
+      if (fromInput && toInput) {
+        fromInput.addEventListener("input", () => {
+          localStorage.setItem(id, fromInput.value);
+          toInput.value = fromInput.value;
+        });
+
+        toInput.addEventListener("input", () => {
+          localStorage.setItem(id, toInput.value);
+          fromInput.value = toInput.value;
+        });
+      }
+    });
+
+    const fromCheckboxes = fromForm.querySelectorAll(checkboxSelector);
+    const toCheckboxes = toForm.querySelectorAll(checkboxSelector);
+
+    fromCheckboxes.forEach((fromCheckbox, index) => {
+      const toCheckbox = toCheckboxes[index];
+      if (fromCheckbox && toCheckbox) {
+        fromCheckbox.addEventListener("change", () => {
+          localStorage.setItem(`checkbox-${index}`, fromCheckbox.checked);
+          toCheckbox.checked = fromCheckbox.checked;
+        });
+        toCheckbox.addEventListener("change", () => {
+          localStorage.setItem(`checkbox-${index}`, toCheckbox.checked);
+          fromCheckbox.checked = toCheckbox.checked;
+        });
+      }
+    });
+  }
+
+  function loadFromStorage() {
+    formFields.forEach(id => {
+      const val = localStorage.getItem(id);
+      if (val !== null) {
+        document.querySelectorAll(`#${id}`).forEach(input => input.value = val);
+      }
+    });
+
+    document.querySelectorAll(checkboxSelector).forEach((checkbox, index) => {
+      const checked = localStorage.getItem(`checkbox-${index}`);
+      if (checked !== null) {
+        checkbox.checked = (checked === "true");
+      }
+    });
+  }
+
+  // Sync both ways
+  syncForms("form1", "form2");
+  syncForms("form2", "form1");
+  loadFromStorage();
+      function showNav(){
+          document.getElementById('header').style.height = '300px';
+          document.getElementById('openNav').textContent = 'Close';
+          document.getElementById('openNav').onclick = closeNav;
+          document.getElementById('header').style.transition = '1s';
+
+
+      }
+      function closeNav(){
+      document.getElementById('header').style.height = '200px';
+      document.getElementById('openNav').textContent = 'Menu';
+      document.getElementById('openNav').onclick = showNav;
+      document.getElementById('header').style.transition = '1s';
+
+      }
+
+
+    </script>
+  <video class="bg-video" autoplay loop muted playsinline>
+       <source src="fire.mp4" type="video/mp4" autoplay loop>
+   </video>
+
+</html>

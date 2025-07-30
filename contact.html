@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../style.css">
+       <link rel="icon" href="./bjc_logo.png">
+        <title>Contact Us - Big John Nolt's BBQ and Catering</title>
+    </head>
+    <body>
+      <header id="header">
+            <a href="./"><img src="bjc_logo.png" alt="Big John's Catering" id="logo"></img></a> 
+          <div onclick="showNav()" id="openNav">Menu</div>
+                <div id="links">
+
+                      <a href="../hot-buffet" class="link  underline-left-to-right">Hot Buffet</a>
+                      <a href="../hor-doeuvres" class="link  underline-left-to-right">Hor D'oeuvres</a>
+
+                      <a href="../events" class="link underline-left-to-right">Event Links</a>
+
+                      <a href="../contact" class="link2 underline-left-to-right">Contact Us</a>
+
+                      <a href="../meet-us" class="link2 underline-left-to-right">Meet Us</a>
+                      <a href="../custom-menu" class="link2 underline-left-to-right">Custom Menu</a>
+                  </div>
+      </header>
+        <main>
+            <form method="put" id="form1" action="thanks">
+                  <h1>Contact Us</h1>
+                    <fieldset>
+                  <label>Client Name:<input type="text" name="client_name" required></label>
+                  <label>Phone Number:<input type="tel" name="phone" required></label>
+                  <label>Email Address:<input type="email" name="email"></label>
+                  <label>Event Date:<input type="date" name="event_date" required></label>
+                        <br>
+                  <label>Event Time:<input type="time" name="event_time" required></label>
+                  <label>Number of Guests:<input type="number" name="guest_count" min="1" required></label>
+                  <label>Event Location:<input name="event_location" required></label>
+                  <label>Additional Notes:<input name="additional_notes" id="notes"></label>
+                        <button type="submit">Submit</button>
+                    </fieldset>
+
+
+                  </form>
+  
+        </main>
+
+        <footer id="footer">
+            <p class="stuff">Established in 2002  <a href="https://www.google.com/search?q=Chamber+of+Commerce+R1116275">Chamber of Commerce R1116275</a>  Fully Licensed and Food Certified</p>
+            <p class="stuff">&copy; 2025 Big John Nolt's BBQ and Catering</p>
+                <p id="contact"><a href="https://www.google.com/maps/place//@40.242637,-76.2156168,17z">415 E Mount Airy Road Stevens, PA 17578</a>   Phone <a href="tel:7173363730">(717) 336-3730 </a>  Fax <a href="tel:7173365189">(717) 336-5189</a></p>
+
+        </footer>
+    
+    </body>
+       <script>
+        function printForm() {
+            // Print only the form, not header/footer
+            window.print();
+        }
+      
+         function showNav(){
+             document.getElementById('header').style.height = '300px';
+             document.getElementById('openNav').textContent = 'Close';
+             document.getElementById('openNav').onclick = closeNav;
+             document.getElementById('header').style.transition = '1s';
+
+
+         }
+         function closeNav(){
+         document.getElementById('header').style.height = '200px';
+         document.getElementById('openNav').textContent = 'Menu';
+         document.getElementById('openNav').onclick = showNav;
+         document.getElementById('header').style.transition = '1s';
+
+         }
+
+
+ </script>
+   <video class="bg-video" autoplay loop muted playsinline>
+        <source src="../fire.mp4" type="video/mp4" autoplay loop>
+    </video>
+
+</html>

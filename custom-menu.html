@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="style.css">
+       <link rel="icon" href="bjc_logo.png">
+       <title>Custom Menu - Big John Nolt's BBQ and Catering</title>
+    </head>
+    <body>
+        <header id="header">
+              <a href="./"><img src="bjc_logo.png" alt="Big John's Catering" id="logo"></img></a> 
+            <div onclick="showNav()" id="openNav">Menu</div>
+              <div id="links">
+
+                  <a href="hot-buffet" class="link  underline-left-to-right">Hot Buffet</a>
+                  <a href="hor-doeuvres" class="link  underline-left-to-right">Hor D'oeuvres</a>
+
+                  <a href="events" class="link underline-left-to-right">Event Links</a>
+
+                  <a href="contact" class="link2 underline-left-to-right">Contact Us</a>
+
+                  <a href="meet-us" class="link2 underline-left-to-right">Meet Us</a>
+                  <a href="custom-menu" class="link2 underline-left-to-right">Custom Menu</a>
+        </header>
+        <main>
+          
+            <h1 style="text-align: center;">Custom Menu</h1>
+           <form id="form1" method="put" action="thanks">
+               <fieldset>
+        <!-- Customer Info -->
+        <fieldset>
+            <legend>Customer Information</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"   >  
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">  
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">  
+
+            <label for="event-time">Event Time</label>
+            <input type="time" id="event-time" name="event_time">
+<br>
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" name="event_date">  
+          <label for="event-location">Event Location</label>
+            <input type="text" id="event-location" name="event_location">
+          
+                 <label for="guest-count">Number of Guests:</label>
+            <input type="number" id="guest-count" name="guest_count" min="1"> <br>
+            <label for="budget">Budget</label>
+            <input type="number" id="budget" name="budget">
+
+          
+        
+        </fieldset>
+   
+        <fieldset>
+            <legend>What do you need?</legend>
+            <textarea name="notes" rows="6" cols="50" id="need" placeholder="Tell us what you need and we will make you a menu"></textarea>
+        </fieldset>
+ 
+        <br>
+               <button type="submit">Submit</button>
+                   </fieldset>
+             </form>
+   
+    
+
+
+        </main>
+
+      <footer id="footer">
+          <p class="stuff">Established in 2002  <a href="https://www.google.com/search?q=Chamber+of+Commerce+R1116275">Chamber of Commerce R1116275</a>  Fully Licensed and Food Certified</p>
+          <p class="stuff">&copy; 2025 Big John Nolt's BBQ and Catering</p>
+              <p id="contact"><a href="https://www.google.com/maps/place//@40.242637,-76.2156168,17z">415 E Mount Airy Road Stevens, PA 17578</a>   Phone <a href="tel:7173363730">(717) 336-3730 </a>  Fax <a href="tel:7173365189">(717) 336-5189</a></p>
+
+      </footer>
+    
+    </body>
+
+    <script>
+        
+
+</script>
+    <video class="bg-video" autoplay loop muted playsinline>
+           <source src="fire.mp4" type="video/mp4" autoplay loop>
+       </video>
+
+</html>
