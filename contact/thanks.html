@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../style.css">
+       
+    
+       <link rel="icon" href="../bjc_logo.png">
+        <title>Big John Nolt's BBQ and Catering</title>
+    </head>
+    <body>
+        <header id="header">
+              <a href="../"><img src="bjc_logo.png" alt="Big John's Catering" id="logo"></img></a> 
+            <div onclick="showNav()" id="openNav">Menu</div>
+              <div id="links">
+                  
+                  <a href="../hot-buffet" class="link  underline-left-to-right">Hot Buffet</a>
+                  <a href="../hor-doeuvres" class="link  underline-left-to-right">Hor D'oeuvres</a>
+                  
+                  <a href="../events" class="link underline-left-to-right">Event Links</a>
+                
+                  <a href="../contact" class="link2 underline-left-to-right">Contact Us</a>
+                  
+                  <a href="../meet-us" class="link2 underline-left-to-right">Meet Us</a>
+                  <a href="../custom-menu" class="link2 underline-left-to-right">Custom Menu</a>
+              </div>
+        </header>
+        <main>
+                    <div class="hero-section">
+                        <div class="hero-items">
+                <h1>Thank You!</h1>
+                <h3>We will be in touch soon!</h3>
+                <p>If you have any questions, please contact us at <a href="tel:7173363730">(717) 336-3730</a></p>
+                            <a href="../"  id="contactButtonA"><button id="contactButton">Back to Home</button></a>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p class="stuff">Established in 2002  <a href="https://www.google.com/search?q=Chamber+of+Commerce+R1116275">Chamber of Commerce R1116275</a>  Fully Licensed and Food Certified</p>
+            <p class="stuff">&copy; 2025 Big John Nolt's BBQ and Catering</p>
+                <p id="contact"><a href="https://www.google.com/maps/place//@40.242637,-76.2156168,17z">415 E Mount Airy Road Stevens, PA 17578</a>   Phone <a href="tel:7173363730">(717) 336-3730 </a>  Fax <a href="tel:7173365189">(717) 336-5189</a></p>
+
+        </footer>
+
+    </body>
+    <script>
+        const video = document.getElementById('video');
+        const source = video.querySelector('source');
+        source.src = 'fire.mp4';
+        video.load();
+
+        
+         const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const slideCount = slides.length;
+    let index = 0;
+
+    // Clone first slide for seamless looping
+    const firstClone = slides[0].cloneNode(true);
+    track.appendChild(firstClone);
+
+    function nextSlide() {
+      index++;
+      track.style.transition = 'transform 0.7s cubic-bezier(0.4,0,0.2,1)';
+      track.style.transform = `translateX(-${index * 100}%)`;
+      if (index === slideCount) {
+        setTimeout(() => {
+          track.style.transition = 'none';
+          track.style.transform = 'translateX(0)';
+          index = 0;
+        }, 700);
+      }
+    }
+     
+    setInterval(nextSlide, 4000);
+        function showNav(){
+            document.getElementById('header').style.height = '300px';
+            document.getElementById('openNav').textContent = 'Close';
+            document.getElementById('openNav').onclick = closeNav;
+            document.getElementById('header').style.transition = '1s';
+
+
+        }
+        function closeNav(){
+        document.getElementById('header').style.height = '200px';
+        document.getElementById('openNav').textContent = 'Menu';
+        document.getElementById('openNav').onclick = showNav;
+        document.getElementById('header').style.transition = '1s';
+
+        }
+  
+
+</script>
+    <video id="myVideo" class="bg-video" autoplay loop muted playsinline>
+           <source src="../fire.mp4" type="video/mp4" id="video" autoplay loop>
+       </video>
+
+</html>
